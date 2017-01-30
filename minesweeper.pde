@@ -16,7 +16,7 @@ void setup() {
         
         calcSizes();    // Calculate the size of the cells to fit the window
         
-        var map = field.getMap();
+        int[][] map = field.getMap();
                 
         for (int j = 0; j < rows; j++) {        // For every cell on the map
             for (int i = 0; i < cols; i++) {
@@ -154,9 +154,9 @@ void setup() {
 
     
 class Minefield{
-    var field;
-    var map;
-    var mines;
+    int[][] field;
+    int[][] map;
+    int mines;
     /**
      * Create the minefield and bury the mines.  The field is a rectangular map with a size of
      * rows cells vertically and cols cells horizontally.  The cells will be either empty or
