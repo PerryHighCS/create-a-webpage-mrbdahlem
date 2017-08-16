@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <script>
+var $this;
+
+window.parent.$(".runnablecode").each(function(i) {
+  var currElmModelAttr = $(this).attr('data-model-attr');
+  $this = $(this);
+  var input = $('<textarea />', {
+    'type': 'text',
+    'name': currElmModelAttr,
+    'style': 'width:' + $this.width() + 'px; ' +
+      'height:' + $this.height() + 'px;',
+    'value': $(this).text()
+  });
+
+
+  $(this).replaceWith(input);
+});
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
